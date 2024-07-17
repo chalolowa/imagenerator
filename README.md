@@ -1,9 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Image Generator :wink:
+
+This is a [Next.js](https://nextjs.org/) typescript project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The project makes use of image generation via text prompts.
+
+## Prerequisite
+
+You're gonna need an API Key for using Hugging Face’s Inference API. Go ahead and create an account on [Hugging Face](https://huggingface.co/) in order to get access tokens.
 
 ## Getting Started
 
-First, run the development server:
+First, install the required dependencies:
+```bash
+npm i
+#or
+yarn i
+```
 
+Next, run the development server:
 ```bash
 npm run dev
 # or
@@ -20,17 +32,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Working Mechanism
 
-To learn more about Next.js, take a look at the following resources:
+1. User inputs a prompt on the frontend
+2. We send this prompt to our backend, which further calls Hugging Face's API
+3. We get an image back from Hugging Face and display it on the frontend
+4. Small and simple project 🙂 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
